@@ -52,4 +52,4 @@ function docker() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 export NEST_VERSION='2.14.0'
-source $(HOME)/NEST/nest-${NEST_VERSION}/bin/nest_vars.sh
+source $HOME/NEST/nest-${NEST_VERSION}/bin/nest_vars.sh
