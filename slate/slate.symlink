@@ -6,6 +6,8 @@ config resizePercentOf screenSize
 config secondsBetweenRepeat 0.1
 config checkDefaultsOnLoad true
 config focusCheckWidthMax 6000
+config windowHintsShowIcons false
+config windowHintsIgnoreHiddenWindows true
 
 # }}}
 
@@ -102,27 +104,27 @@ config focusCheckWidthMax 6000
 
 # }}}
 
-# okl; bindings {{{
+# hjkl bindings {{{
 
   # Current screen (CTRL + CMD [+ SHIFT]) {{{
 
     # Full screen {{{
-        bind o:ctrl,cmd      ${c-max}
-        bind w:ctrl,cmd      ${c-max}
+        bind k:ctrl,cmd      ${c-max}
+        bind k:ctrl,cmd      ${c-max}
       # }}}
 
     # Half screen {{{
-        bind k:ctrl,cmd        push left  bar-resize:screenSizeX/2
-        bind ;:ctrl,cmd        push right bar-resize:screenSizeX/2
-        bind o:shift,ctrl,cmd  push up    bar-resize:screenSizeY/2
-        bind l:ctrl,cmd        push down  bar-resize:screenSizeY/2
+        bind h:ctrl,cmd        push left  bar-resize:screenSizeX/2
+        bind l:ctrl,cmd        push right bar-resize:screenSizeX/2
+        bind k:shift,ctrl,cmd  push up    bar-resize:screenSizeY/2
+        bind j:ctrl,cmd        push down  bar-resize:screenSizeY/2
       # }}}
 
     # Quarter screen {{{
-        bind k:ctrl,alt,cmd  ${c-bl}
-        bind ;:ctrl,alt,cmd  ${c-br}
-        bind k:shift,alt,cmd ${c-tl}
-        bind ;:shift,alt,cmd ${c-tr}
+        bind h:ctrl,alt,cmd  ${c-bl}
+        bind l:ctrl,alt,cmd  ${c-br}
+        bind h:shift,alt,cmd ${c-tl}
+        bind l:shift,alt,cmd ${c-tr}
       # }}}
 
   # }}}
@@ -130,14 +132,14 @@ config focusCheckWidthMax 6000
   # Next screen (ALT+CMD [+ SHIFT]) {{{
 
     # Full screen {{{
-        bind o:alt,cmd          throw next resize
+        bind k:alt,cmd          throw next resize
       # }}}
 
     # Half screen {{{
-        bind k:alt,cmd          push left  bar-resize:screenSizeX/2 next
-        bind ;:alt,cmd          push right bar-resize:screenSizeX/2 next
-        bind o:shift,alt,cmd    push up    bar-resize:screenSizeY/2 next
-        bind l:alt,cmd          push down  bar-resize:screenSizeY/2 next
+        bind h:alt,cmd          push left  bar-resize:screenSizeX/2 next
+        bind l:alt,cmd          push right bar-resize:screenSizeX/2 next
+        bind k:shift,alt,cmd    push up    bar-resize:screenSizeY/2 next
+        bind j:alt,cmd          push down  bar-resize:screenSizeY/2 next
       # }}}
 
     # Quarter screen {{{
@@ -147,14 +149,14 @@ config focusCheckWidthMax 6000
   # Active window {{{
 
       # Resize Bindings (CTRL + ALT [+ SHIFT]) {{{
-        bind ;:ctrl,alt,shift   resize +10%   +0
-        bind k:ctrl,alt,shift   resize -10%   +0
-        bind o:ctrl,alt,shift   resize   +0 -10%
-        bind l:ctrl,alt,shift   resize   +0 +10% 
-        bind ;:ctrl,alt         resize -10%   +0 bottom-right
-        bind k:ctrl,alt         resize +10%   +0 bottom-right
-        bind o:ctrl,alt         resize   +0 +10% bottom-right
-        bind l:ctrl,alt         resize   +0 -10% bottom-right
+        bind l:ctrl,alt,shift   resize +10%   +0
+        bind h:ctrl,alt,shift   resize -10%   +0
+        bind k:ctrl,alt,shift   resize   +0 -10%
+        bind j:ctrl,alt,shift   resize   +0 +10% 
+        bind l:ctrl,alt         resize -10%   +0 bottom-right
+        bind h:ctrl,alt         resize +10%   +0 bottom-right
+        bind k:ctrl,alt         resize   +0 +10% bottom-right
+        bind j:ctrl,alt         resize   +0 -10% bottom-right
       # }}}
 
   # }}}
