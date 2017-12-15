@@ -1,0 +1,9 @@
+
+# Development directory
+export DEV=$HOME/Documents/projects
+
+# Project directory
+export CODE=$HOME/docker
+
+# Add TeX commands to PATH
+export PATH="$PATH:/usr/texbin"

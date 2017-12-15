@@ -1,7 +1,14 @@
+# ENVIRONMENT VARIABLES
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 # Source environment variables immediately
 source ~/.globalenv
 
-export DOTFILES=$HOME/dotfiles
+# Source machine-specific environment variables
+source ~/.globalenv
+if [[ -f ~/.globalenv-$HOST ]]; then
+   source ~/.globalenv-$HOST
+fi
 
 # OH-MY-ZSH
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,11 +119,6 @@ bindkey "^J" history-substring-search-down
 # prompt.
 bindkey "^Q" push-input
 
-# BINARIES
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# Add user binaries to path
-export PATH=$HOME/bin:$PATH
 
 # ALIASES
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

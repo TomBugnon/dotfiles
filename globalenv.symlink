@@ -1,22 +1,24 @@
-# Make Vim the default editor
-export EDITOR=vim
-export VISUAL='vim'
-export DEFAULT_USER="will"
+# Make atom the default editor
+export EDITOR=atom
+export VISUAL='atom'
+export DEFAULT_USER='Tom'
+
 # Keep public, versioned executables in ~/dotfiles/bin
 export PATH=$HOME/dotfiles/bin:$PATH:
+
 # Shortcut to aliases
 export ALIASES=$HOME/.aliases
+
 # Bash-specific aliases
 export BASH_ALIASES=$HOME/.bash_aliases
-# Development directory
-export DEV=$HOME/dev
-# Project directory
-export CODE=$DEV/projects
+
 # Path to dotfiles repo (just set it to $HOME if you don't have one)
 export DOTFILES=$HOME/dotfiles
-# Add TeX commands to PATH
-export PATH="$PATH:/usr/texbin"
+
 # Make sure /usr/local/bin/ is at beginning of $PATH
 export PATH="/usr/local/bin:$PATH"
 
-# vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0:ft=sh
+# Set locale variables
+export LANG="en_US.UTF-8"
+export LANGUAGE=$LANG
+export LC_ALL=$LANG
