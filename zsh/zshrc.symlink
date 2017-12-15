@@ -169,7 +169,8 @@ autoload zmv
 
 # PYTHON:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-export PYTHONSTARTUP=${HOME}/.pythonstartup.py
+# (already sourced from config.zsh)
+# export PYTHONSTARTUP=${HOME}/.pythonstartup.py
 
 
 # $(HOST) SPECIFIC CONFIG
