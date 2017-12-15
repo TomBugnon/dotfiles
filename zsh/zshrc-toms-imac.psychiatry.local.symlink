@@ -1,0 +1,55 @@
+export MACHINE='work'
+
+# MATLAB
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export PATH=/Applications/MATLAB_R2016b.app/bin:$PATH
+
+
+# FSL
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Settings for FSL 5.0.6
+export PATH="/usr/local/fsl/bin:${PATH}"
+export FSLDIR="/usr/local/fsl"
+if [[ -s "${FSLDIR}/etc/fslconf/fsl.sh" ]]; then
+source "${FSLDIR}/etc/fslconf/fsl.sh"
+fi
+
+# FREESURFER
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export FREESURFER_HOME=/Applications/freesurfer
+source $FREESURFER_HOME/SetUpFreeSurfer.sh
+export SUBJECTS_DIR=~/Documents/data/mri/
+
+
+# ITERM2
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Tab titling
+# Use by calling `title <title_name`
+function title { echo -ne "\033]0;"$*"\007" }
+
+## Function to change the iterm profile
+function itprof() { echo -e "\033]50;SetProfile=$1\a" }
+
+## Change iterm profile when using docker by creating an 'alias' for `docker`
+# NB: you need to create a iterm2 profile named 'docker' first
+# NB: Doesn't get back to the default profile if the command fails or when you
+# quit docker.
+function docker() {
+  case $* in
+    run* ) shift 1; itprof docker && command docker run "$@" ;;
+    attach* ) shift 1; itprof docker && docker attach "$@" ;;
+    start* ) shift 1; command itprof docker && docker start "$@" ;;
+    * ) command docker "$@" ;;
+  esac
+}
+
+
+# NEST
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export NEST_VERSION='2.14.0'
+source $(HOME)/NEST/nest-${NEST_VERSION}/bin/nest_vars.sh
