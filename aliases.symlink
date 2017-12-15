@@ -1,13 +1,22 @@
 # TODO: use environment variables where possible
 
+# Quick app launch {{{
+  alias textedit="open -a TextEdit"
+  alias chrome="open -a Google\ Chrome"
+  alias word="open -a Microsoft\ Word"
+  alias o="$EDITOR"
+  alias meld="open -a meld"
+# }}}
+
+
 # Util {{{
 
   # Use GNU grep instead of BSD grep
-  alias grep="ggrep"
+  #alias grep="ggrep"
   # Use colordiff instead of native diff
   alias diff="colordiff"
   # Always sudo htop (doesn't work properly otherwise)
-  alias htop="sudo htop"
+  #alias htop="sudo htop"
   # Always use 256 colors with tmux.
   alias tmux="tmux -2"
   # list dir contents (all with human-readable size)
@@ -22,6 +31,8 @@
   alias c='clear'
   # shortcut for clearing screen and dispalying dir contents
   alias cl='clear && l'
+  # shortcut for clearing screen and dispalying dir tree
+  alias ct='clear && tree'
   # move up one directory
   alias ..="cd .."
   # human-readable disk usage information
@@ -53,7 +64,7 @@
   # fast git status
   alias g='git status'
   # edit .gitconfig
-  alias vgrc="vim ~/.gitconfig"
+  # alias vgrc="vim ~/.gitconfig"
 
 # }}}
 
@@ -62,7 +73,7 @@
   # source aliases
   alias salias="source $ALIASES"
   # edit aliases
-  alias valias="vim $ALIASES"
+  #alias valias="vim $ALIASES"
   # use MacVim as gvim
   alias gvim="mvim"
   # edit local .vimrc
@@ -88,17 +99,11 @@
 # Dev {{{
 
   # Forward port
-  alias forward="ssh -NL"
+  # alias forward="ssh -NL"
   # Alias for syntax highlighting with Pygments
   alias hl="pygmentize -g"
-  # Alias for MATLAB binary
-  alias matlab='/Applications/MATLAB_R2014b.app/bin/matlab'
   # Alias for custom-coloring of ag
   alias ag='ag --color-line-number 34 --color-match 36 --color-path 32'
-  # Shortcut for Python interpreter
-  alias p='python'
-  # Shortcut for IPython intepreter
-  alias ip='ipython'
   # edit .hgrc
   alias vhgrc="vim ~/.hgrc"
   # cd dev
@@ -124,12 +129,6 @@
 
 # }}}
 
-# Webdev {{{
-
-  # cd my website
-  alias cdsite="cd $CODE/willmayner.com/"
-
-# }}}
 
 # fasd {{{
 
@@ -165,12 +164,10 @@
 
 # Python {{{
 
-  alias testregister="python setup.py register -r testpypi"
-  alias testupload="python setup.py sdist bdist_wheel upload -r testpypi"
-  alias pypiregister="python setup.py register -r pypi"
-  alias pypiupload="python setup.py sdist bdist_wheel register upload --sign -r pypi"
-  # remove dot from py.test executable
-  alias pytest="py.test"
+  alias p="python3"
+  alias p2="python2"
+  alias ip="ipython3"
+  alias ip2="ipython2"
 
 # }}}
 
