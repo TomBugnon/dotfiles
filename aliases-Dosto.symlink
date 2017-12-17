@@ -1,0 +1,22 @@
+
+# Quick app launch {{{
+  chrom='chromium-browser'
+
+# Linux {{{
+
+  alias linstall="sudo apt-get install"
+  alias "trash-restore"="restore-trash"
+  alias res="restore-trash"
+
+# }}}
+
+# Util {{{
+
+  # Use colordiff and less instead of native diff
+  alias dif="colordiffless"
+  # move file to trash
+  alias t="trash-put"
+  # safe rm
+  alias rm="trash-put"
+  # shortcut for clearing screen and dispalying dir contents
+  alias cll='clear && ll'

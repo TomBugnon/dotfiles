@@ -123,8 +123,12 @@ bindkey "^Q" push-input
 # ALIASES
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# get aliases
-source $ALIASES
+# Source machine-specific aliases
+source ~/.aliases
+if [[ -f ~/.aliases-$HOST ]]; then
+   source ~/.aliases-$HOST
+fi
+
 
 # PRIVATE CONFIG
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

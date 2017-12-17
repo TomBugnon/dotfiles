@@ -1,0 +1,30 @@
+
+
+# Quick app launch {{{
+  alias textedit="open -a TextEdit"
+  alias chrome="open -a Google\ Chrome"
+  alias word="open -a Microsoft\ Word"
+  alias meld="open -a meld"
+# }}}
+
+
+# Util {{{
+
+  # Use GNU grep instead of BSD grep
+  #alias grep="ggrep"
+  # Use colordiff instead of native diff
+  alias diff="colordiff"
+  # Always sudo htop (doesn't work properly otherwise)
+  #alias htop="sudo htop"
+  # shortcut to trash (safe rm)
+  alias t="trash"
+  # shortcut for clearing screen and dispalying dir tree
+  alias ct='clear && tree'
+  # source aliases
+  alias salias="source $ALIASES"
+  # edit aliases
+  #alias valias="vim $ALIASES"
+  # use MacVim as gvim
+  alias gvim="mvim"
+  # edit .slate
+  alias vslate="vim ~/.slate"
