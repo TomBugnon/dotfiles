@@ -175,15 +175,6 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 autoload zmv
 
 
-# VIRTUAL ENVS:
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-mkdir -p $WORKON_HOME
-source /usr/local/bin/virtualenvwrapper.sh
-
-
 # PYTHON:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 export PYTHONSTARTUP='$HOME/.pythonstartup.py'
