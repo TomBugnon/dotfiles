@@ -5,4 +5,5 @@ paper-test.tex
 .venv
 npm-debug.log
 .pythonrc.py
+*.egg-info/*
 .idea
