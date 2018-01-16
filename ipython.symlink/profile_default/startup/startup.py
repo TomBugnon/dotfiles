@@ -6,6 +6,10 @@ import re
 # from collections import Counter, defaultdict, namedtuple
 # from hashlib import md5, sha1
 try:
+    import matplotlib.pyplot as plt
+except:
+    pass
+try:
     import itertools
 except:
     pass

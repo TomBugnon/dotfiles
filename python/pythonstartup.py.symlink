@@ -31,6 +31,7 @@ if not in_ipython():
     from code import InteractiveConsole
 
     # Imports we want
+    import matplotlib.pyplot as plt
     from itertools import *
     import numpy as np
     import datetime
