@@ -28,6 +28,9 @@
 
 # Git {{{
 
+  # git rebase -i
+  alias greb="git rebase -i"
+  # git commit -m
   alias gc="git commit -m"
   # git diff
   alias gd='git d'
