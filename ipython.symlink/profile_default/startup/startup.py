@@ -1,6 +1,7 @@
 import os
 import sys
 import re
+import math
 # from fractions import Fraction
 # from datetime import date, datetime, timedelta
 # from collections import Counter, defaultdict, namedtuple
@@ -20,12 +21,18 @@ try:
     import numpy as np
 except:
     pass
-
+try:
+    import itertools
+except:
+    pass
 try:
     import nest
 except:
     pass
-
+try:
+    import nest.topology as tp
+except:
+    pass
 try:
     nest.Install('bmtneuronmodule')
 except:

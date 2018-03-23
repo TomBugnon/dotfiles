@@ -179,3 +179,5 @@ if [[ -f ~/.zshrc-$HOST ]]; then
    [[ ! -f ~/.zshrc-$HOST.zwc || ~/.zshrc-$HOST -nt ~/.zshrc-$HOST.zwc ]] && { zcompile ~/.zshrc-$HOST; print - compiled \~/.zshrc-$HOST. }
    source ~/.zshrc-$HOST
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -11,7 +11,7 @@
   g = log --graph
   gr = log --graph --pretty=oneline --abbrev-commit
   la = log --graph --date-order --all --full-history --date=short --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"
-  l = log --graph --date-order --full-history --date=relative --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[32m%x20%ad%x1b[0m"
+  l = log --graph --date-order --all --full-history --date=relative --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[32m%x20%ad%x1b[0m"
   s = status
   mt = mergetool
   unstage = reset HEAD --
@@ -29,6 +29,13 @@
   #   3. Swap you back to the branch you started on
   save = !sh -c 'export PREV=$(git symbolic-ref HEAD|cut -d/ -f3-) && git checkout -b "$1" && git commit -am "$1" && git checkout "$PREV"' -
   reb = rebase -i
+  # Hide files
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
+  unhideall = update-index --really-refresh
+  hidden = !git ls-files -v | grep "^[[:lower:]]"
+  # List all tracked files
+  tracked = ls-files -v
 [color]
   ui = 1
 [color "branch"]
@@ -50,7 +57,7 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-  editor = atom --wait
+  editor = vim
 [credential]
   # helper = osxkeychain
 [push]
@@ -84,4 +91,4 @@
   trustExitCode = true
   cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [pull]
-	rebase = true
+	rebase = false
