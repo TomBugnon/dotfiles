@@ -36,6 +36,7 @@
   hidden = !git ls-files -v | grep "^[[:lower:]]"
   # List all tracked files
   tracked = ls-files -v
+  untracked = ls-files --others --exclude-standard
 [color]
   ui = 1
 [color "branch"]
