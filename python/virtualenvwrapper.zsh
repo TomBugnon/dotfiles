@@ -4,7 +4,7 @@ if [ $HOST = Dosto ]
 then
   export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 else
-  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python2"
 fi
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME=$CODE
