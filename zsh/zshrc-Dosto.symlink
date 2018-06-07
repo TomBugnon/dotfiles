@@ -4,5 +4,5 @@ export MACHINE='home'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Use powerline
-source "/home/tom/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh"
-powerline-daemon --quiet
+# source "/home/tom/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh"
+# powerline-daemon --quiet

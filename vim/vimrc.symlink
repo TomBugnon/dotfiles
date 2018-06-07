@@ -185,11 +185,6 @@
 " }
 
 " Settings {
-
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
   " No compatibility with vi; must be first line
   set nocompatible
 
@@ -214,7 +209,7 @@
    " searches wrap around the end of the file
   set wrapscan
   " highlight the column beyond textwidth
-  set colorcolumn=+1
+  set colorcolumn=81
   " Set which number formats will be incremented with <C-A> and <C-X>
   set nrformats=alpha,octal,hex,bin
 
@@ -359,16 +354,13 @@
     endfunction
     noremap <leader>bg :call ToggleBG()<CR>
 
-    " Hide invisibles
-    set nolist
-
     " Maximum number of tabs to show
     set tabpagemax=20
     " Display the current mode
     set showmode
-    " Highlight current line
+    " Don't highlight current line
     set nocursorline
-    " highlight the column the cursor is on
+    " Don't highlight the column the cursor is on
     set nocursorcolumn
 
     " SignColumn should match background
@@ -376,7 +368,7 @@
     " Current line number row will have same background color in relative mode
     highlight clear LineNr
     " Remove highlight color from current line number
-    "highlight clear CursorLineNr
+    " highlight clear CursorLineNr
 
     if has('cmdline_info')
       " Show the ruler
@@ -445,7 +437,7 @@
 
   " Formatting {
 
-    set textwidth=79
+    set textwidth=0
     " Do not wrap long lines
     set nowrap
     " Indent at the same level of the previous line
@@ -457,7 +449,7 @@
     " Tabs are spaces, not tabs
     set expandtab
     " An indentation every four columns
-    set tabstop=4
+    set tabstop=2
     " Let backspace delete indent
     set softtabstop=2
     " Explicitly set tab size for certain languages
@@ -479,7 +471,7 @@
     " Remove trailing whitespaces and ^M chars
     augroup VimrcRemoveTrailingWhitespace
       autocmd!
-      autocmd FileType c,cpp,java,go,php,javascript,puppet,python,pyrex,rust,twig,xml,yml,perl,sql,vim,zsh,sh,cfg,conf,yaml,make,dosini,manifest autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+      autocmd FileType c,cpp,java,go,php,javascript,puppet,python,pyrex,rust,twig,xml,yml,perl,sql,vim,zsh,sh,cfg,conf,yaml,make,dosini,manifest,bib,tmux,json,css autocmd BufWritePre <buffer> call StripTrailingWhitespace()
     augroup END
 
   " }
@@ -487,11 +479,6 @@
 " }
 
 " Configure plugins {
-
-  " vim-easy-align {
-      nmap ga <Plug>(EasyAlign)
-      vmap ga <Plug>(EasyAlign)
-  " }
 
   " solarized {
     set t_Co=16
@@ -817,7 +804,8 @@
 
     " For snippet_complete marker
     if has('conceal')
-      set conceallevel=2 concealcursor=i
+      " set conceallevel=2 concealcursor=i
+      set concealcursor=i
     endif
 
   " }

@@ -1,0 +1,13 @@
+virtualenvwrapper
+powerline-status
+pip-autoremove
+tqdm
+pytest
+pylint
+flake8
+isort
+yapf
+pygments
+matplotlib
+numpy
+scipy

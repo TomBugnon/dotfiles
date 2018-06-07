@@ -1,0 +1,14 @@
+cmake
+mmv
+mutt
+nmap
+pandoc
+python3-dev
+python-dev
+redis-server
+rsnapshot
+rstudio-server
+rsync
+tree
+vim-gtk
+zsh

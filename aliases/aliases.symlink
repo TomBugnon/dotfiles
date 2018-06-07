@@ -1,11 +1,14 @@
 # TODO: use environment variables where possible
 
-# Editors
+# Editors {
+
   alias o='$EDITOR'
   alias os='subl -n'
   alias oa='atom'
 
-# Util
+# }
+
+# Util {
 
   # Always use 256 colors with tmux.
   alias tmux="tmux -2"
@@ -24,9 +27,9 @@
   # human-readable disk usage information
   alias df="df -h"
 
-#
+# }
 
-# Git
+# Git {
 
   # git rebase -i
   alias greb="git rebase -i"
@@ -61,9 +64,9 @@
   # edit .gitconfig
   alias vgrc="vim ~/.gitconfig"
 
-#
+# }
 
-# Config
+# Config {
 
   # edit local .vimrc
   alias vrc="vim ~/.vimrc.local"
@@ -72,18 +75,18 @@
   # edit local vim bundles for vundle
   alias vbun="vim ~/.vimrc.bundles.local"
 
-  # zsh
+# }
 
-    # edit zsh config
-    alias vzsh="vim ~/.zshrc"
-    # source zsh config
-    alias szsh="source ~/.zshrc"
+# zsh {
 
-  #
+  # edit zsh config
+  alias vzsh="vim ~/.zshrc"
+  # source zsh config
+  alias szsh="source ~/.zshrc"
 
-#
+# }
 
-# Dev
+# Dev {
 
   # Forward port
   # alias forward="ssh -NL"
@@ -98,9 +101,9 @@
   # copy current directory to htdocs to run php server locally with MAMP
   alias pphp="sudo rm -r /Applications/MAMP/htdocs && mkdir /Applications/MAMP/htdocs && cp -r ./* /Applications/MAMP/htdocs"
 
-#
+# }
 
-# Latex
+# Latex {
 
   # run latexmk with following options:
   # compile to pdf
@@ -114,10 +117,9 @@
   # vim the .tex files in the current directory
   alias mtex="find . -iname '*.tex' -exec vim {} \;"
 
-#
+# }
 
-
-# fasd
+# fasd {
 
   # Directory change aliases
       alias j="fasd_cd -d"
@@ -131,7 +133,6 @@
       alias jr="fasd_cd -dr"
       # match by recent access only
       alias jt="fasd_cd -dt"
-  #
 
   # Output matches to stdout, for use with backticks
       alias jj="fasd -d"
@@ -147,15 +148,15 @@
       alias jjt="fasd -dt"
   #
 
+# }
+
 #
 
-# Python
+# Python {
 
   alias p="python3"
   alias p2="python2"
   alias ip="ipython3"
   alias ip2="ipython2"
 
-#
-
-# vim:foldmethod=marker:foldmarker=,:foldlevel=0:ft=sh
+# }

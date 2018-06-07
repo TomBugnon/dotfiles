@@ -1,2 +1,2 @@
 # Add .local/bin to PATH (get powerline)
-export PATH="$HOME/.local/bin:$PATH"
+# export PATH="$HOME/.local/bin:$PATH"

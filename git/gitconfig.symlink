@@ -61,6 +61,13 @@
   editor = vim
 [credential]
   # helper = osxkeychain
+[merge]
+  tool = atom
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [push]
   default = current
 [help]
@@ -68,8 +75,8 @@
 [rerere]
   enabled = 1
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
@@ -84,12 +91,5 @@
 [difftool "meld"]
   trustExitCode = true
   cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
-[merge]
-  tool = atom
-[mergetool]
-  prompt = false
-[mergetool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [pull]
 	rebase = false
