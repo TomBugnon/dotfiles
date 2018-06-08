@@ -91,9 +91,10 @@ for SOURCE_FILE in $(find $(pwd) -name '*.symlink'); do
   ln -sv "$SOURCE_FILE" $LINK_FILE;
 done
 
-printf "\nSymlinking IPython profile...\n"
-mkdir -p "$HOME/.ipython/profile_default"
-ln -sv "$(pwd)/ipython/ipython_config.py" "$HOME/.ipython/profile_default/ipython_config.py"
+printf "\nSymlinking IPython profile and startup...\n"
+mkdir -p "$HOME/.ipython/profile_default/startup"
+ln -svf "$(pwd)/ipython/ipython_config.py" "$HOME/.ipython/profile_default/ipython_config.py"
+ln -svf "$(pwd)/ipython/startup.py" "$HOME/.ipython/profile_default/startup/startup.py"
 
 printf "\nSetting up Vim and Neovim...\n"
 # Neovim

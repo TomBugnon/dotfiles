@@ -38,7 +38,7 @@
 # c.InteractiveShellApp.exec_PYTHONSTARTUP = True
 
 # List of files to run at IPython startup.
-c.InteractiveShellApp.exec_files = ['startup.py']
+# c.InteractiveShellApp.exec_files = ['startup.py']
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [

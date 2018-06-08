@@ -37,8 +37,9 @@ try:
     nest.Install('bmtneuronmodule')
 except:
     pass
-
 try:
     nest.Install('rotatedrectangularmaskmodule')
 except:
     pass
+
+print('\n==\nYo\n==\n')
