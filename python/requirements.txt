@@ -11,3 +11,4 @@ pygments
 matplotlib
 numpy
 scipy
+cython

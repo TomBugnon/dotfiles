@@ -42,4 +42,8 @@ try:
 except:
     pass
 
+try:
+    from pprint import pprint as pp
+except:
+    pass
 print('\n==\nYo\n==\n')

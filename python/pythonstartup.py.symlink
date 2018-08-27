@@ -37,6 +37,8 @@ if not in_ipython():
     import datetime
     import pdb
 
+    from pprint import pprint as pp
+
     AUTHOR = 'Seth House <seth@eseth.com>'
 
     # Color Support
