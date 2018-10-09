@@ -22,6 +22,8 @@
   alias c='clear'
   # shortcut for clearing screen and dispalying dir contents
   alias cl='clear && l'
+  # shortcut for clearing screen and displaying tree view
+  alias ct='clear && tree'
   # move up one directory
   alias ..="cd .."
   # human-readable disk usage information
