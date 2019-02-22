@@ -11,3 +11,4 @@ sleep/*
 test_scripts/*
 utils_scripts/*
 *-Copy*
+*output*
