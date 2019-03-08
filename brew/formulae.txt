@@ -13,6 +13,8 @@ mutt
 neovim
 nmap
 pandoc
+ipython
+ipython2
 python
 python2
 r

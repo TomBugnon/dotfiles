@@ -11,7 +11,7 @@
   g = log --graph
   gr = log --graph --pretty=oneline --abbrev-commit
   la = log --graph --date-order --all --full-history --date=short --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"
-  l = log --graph --date-order --all --full-history --date=relative --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[32m%x20%ad%x1b[0m"
+  l = log --graph --date-order --all --full-history --date=relative --color --show-notes="*" --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[32m%x20%ad%x1b[0m"
   s = status
   mt = mergetool
   unstage = reset HEAD --
@@ -37,6 +37,14 @@
   # List all tracked files
   tracked = ls-files -v
   untracked = ls-files --others --exclude-standard
+  # Return date of tag. (To use in another alias)
+  tag-date = "!git show $1 | awk '{ if ($1 == \"Date:\") { print substr($0, index($0,$3)) }}' | tail -2 | head -1 #"
+  # Show tag message
+  tag-message = "!git show $1 | awk -v capture=0 '{ if(capture) message=message\"\\n\"$0}; BEGIN {message=\"\"}; { if ($1 == \"Date:\" && length(message)==0 ) {capture=1}; if ($1 == \"commit\" ) {capture=0}  }; END { print message }' | sed '$ d' | cat -s #"
+  ### Move tag. Use: git tagm <tagname> <newcommit> 
+  tagm = "!GIT_TAG_MESSAGE=$(git tag-message $1) && GIT_COMMITTER_DATE=$(git tag-date $1) && git tag-message $1 && git tag -d $1 && git tag -a $1 $2 -m \"$GIT_TAG_MESSAGE\" #"
+  ### Move pushed tag. Use: git tagmp <tagname> <newcommit> 
+  tagmp = "!git tagm $1 $2 && git push --delete origin $1 && git push origin $1 #"
 [color]
   ui = 1
 [color "branch"]
@@ -93,3 +101,5 @@
   cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
 [pull]
 	rebase = false
+[credential]
+	helper = osxkeychain
