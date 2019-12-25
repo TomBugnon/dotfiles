@@ -10,6 +10,7 @@ git-flow
 gpg
 gpg-agent
 mutt
+macvim
 neovim
 nmap
 pandoc
