@@ -70,7 +70,7 @@
 [credential]
   # helper = osxkeychain
 [merge]
-  tool = atom
+  tool = vimdiff
 [mergetool]
   prompt = false
 [mergetool "meld"]
@@ -90,7 +90,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [diff]
-  tool = atom
+  tool = vimdiff
 [diff "xlsx"]
   binary = true
   textconv = /usr/local/bin/xlsx2csv

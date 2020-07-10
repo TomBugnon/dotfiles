@@ -70,11 +70,6 @@ OS=$(uname -s)
     fi
   # }
 
-  # startup {
-
-    export PYTHONSTARTUP=${HOME}/.pythonstartup.py
-
-  # }
 # }
 
 
