@@ -1,9 +1,9 @@
 {
   "load_extensions": {
     "ipyparallel": false,
+    "jupyter-js-widgets/extension": true,
     "ipcluster": true,
-    "vim_binding/vim_binding": true,
-    "jupyter-js-widgets/extension": true
+    "vim_binding/vim_binding": true
   },
   "keys": {
     "command": {
