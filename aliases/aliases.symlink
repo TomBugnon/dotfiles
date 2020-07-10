@@ -28,6 +28,8 @@
   alias ..="cd .."
   # human-readable disk usage information
   alias df="df -h"
+  # alias "watch" so you can use it with aliases
+  alias watch='watch --color'
 
 # }
 
@@ -65,7 +67,7 @@
   alias g='git status'
   # edit .gitconfig
   alias vgrc="vim ~/.gitconfig"
-
+  alias gchildren="!f() { git rev-list --all --not $1^@ --children | grep $(git rev-parse $1); }; f" # reachable children of a ref
 # }
 
 # Config {
